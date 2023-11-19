@@ -1,0 +1,907 @@
+/* 
+
+     ============================================================
+      
+          _____________   ^^^^^^^^^^    ____________________
+
+[   By ~Aryan Maurya Mr.perfect https://amsrportfolio.netlify.app  ]
+
+          _____________   ^^^^^^^^^^    ____________________
+
+     ============================================================
+
+*/
+
+body {
+    background: url("https://image.freepik.com/free-vector/hand-drawn-bricks-background_1176-82.jpg");
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: repeat x;
+    background-position: center;
+    background-size: 32vw;
+}
+
+#loading {
+    transition: 15s;
+    display: block;
+    visibility: visible;
+    color: blue;
+}
+
+#menuScreen {
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+    z-index: 2001;
+    position: fixed;
+    display: block;
+    visibility: visible;
+    background-color: blue;
+    border: 13px solid #002255;
+    box-sizing: border-box;
+    border-radius: 5vw;
+}
+
+#menuScreen p {
+    color: white;
+}
+
+#loading2 {
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    z-index: 2000;
+    display: block;
+    visibility: visible;
+    background-color: white;
+    transition: 3s;
+}
+
+.header {
+    background-color: #240053;
+    position: fixed;
+    display: none;
+    top: 36vh;
+    left: 0vw;
+    height: 25px;
+    width: 320px;
+    text-align: center;
+    border-radius: 30px;
+    z-index: 120;
+    color: white;
+    border: 4px solid white;
+}
+
+
+/* 
+
+     ============================================================
+      
+          _____________   ^^^^^^^^^^    ____________________
+
+[   By ~Aryan Maurya Mr.perfect https://amsrportfolio.netlify.app  ]
+
+          _____________   ^^^^^^^^^^    ____________________
+
+     ============================================================
+
+*/
+
+#HPBar {
+    height: 6px;
+    position: fixed;
+    top: 285px;
+    left: 0px;
+    border: 1px solid white;
+    z-index: 110;
+}
+
+#HPWrapper {
+    background: darkred;
+    width: 60px;
+    height: 6px;
+}
+
+#HPDamage {
+    width: 98%;
+    height: 6px;
+    background: green;
+}
+
+#HPBarTwo {
+    height: 6px;
+    position: fixed;
+    top: 285px;
+    left: 75px;
+    border: 1px solid white;
+    z-index: 110;
+}
+
+#HPWrapperTwo {
+    background: darkred;
+    width: 60px;
+    height: 6px;
+}
+
+#HPDamageTwo {
+    width: 98%;
+    height: 6px;
+    background: green;
+    transition: 0.75s;
+}
+
+#HPBarThree {
+    height: 6px;
+    position: fixed;
+    top: 285px;
+    left: 150px;
+    border: 1px solid white;
+    z-index: 110;
+}
+
+#HPWrapperThree {
+    background: darkred;
+    width: 60px;
+    height: 6px;
+}
+
+#HPDamageThree {
+    width: 98%;
+    height: 6px;
+    background: green;
+    transition: 0.75s;
+}
+
+#HPBarFour {
+    height: 6px;
+    position: fixed;
+    top: 285px;
+    left: 225px;
+    border: 1px solid white;
+    z-index: 110;
+}
+
+#HPWrapperFour {
+    background: darkred;
+    width: 60px;
+    height: 6px;
+}
+
+#HPDamageFour {
+    width: 98%;
+    height: 6px;
+    background: green;
+    transition: 0.75s;
+}
+
+#HPBarE {
+    height: 6px;
+    position: fixed;
+    top: 16px;
+    left: 0px;
+    border: 1px solid white;
+    z-index: 110;
+}
+
+#HPWrapperE {
+    background: darkred;
+    width: 60px;
+    height: 6px;
+}
+
+#HPDamageE {
+    width: 98%;
+    height: 6px;
+    background: green;
+    transition: 0.75s;
+}
+
+#HPBarETwo {
+    height: 6px;
+    position: fixed;
+    top: 16px;
+    left: 75px;
+    border: 1px solid white;
+    z-index: 110;
+}
+
+#HPWrapperETwo {
+    background: darkred;
+    width: 60px;
+    height: 6px;
+}
+
+#HPDamageETwo {
+    width: 98%;
+    height: 6px;
+    background: green;
+    transition: 0.75s;
+}
+
+#HPBarEThree {
+    height: 6px;
+    position: fixed;
+    top: 16px;
+    left: 150px;
+    border: 1px solid white;
+    z-index: 110;
+}
+
+#HPWrapperEThree {
+    background: darkred;
+    width: 60px;
+    height: 6px;
+}
+
+#HPDamageEThree {
+    width: 98%;
+    height: 6px;
+    background: green;
+    transition: 0.75s;
+}
+
+#HPBarEFour {
+    height: 6px;
+    position: fixed;
+    top: 16px;
+    left: 225px;
+    border: 1px solid white;
+    z-index: 110;
+}
+
+#HPWrapperEFour {
+    background: darkred;
+    width: 60px;
+    height: 6px;
+}
+
+#HPDamageEFour {
+    width: 98%;
+    height: 6px;
+    background: green;
+    transition: 0.75s;
+}
+
+#confirmTurn_ATBProgress {
+    z-index: 110;
+    width: 60px;
+    position: fixed;
+    left: 0px;
+    top: 250px;
+}
+
+#ATBBar {
+    z-index: 100;
+    width: 50px;
+    position: fixed;
+    left: 0px;
+    top: 264px;
+}
+
+#ATBWrapper {
+    border: 1px solid silver;
+    border-radius: 2px;
+    background-color: rgb(155, 155, 155);
+    height: 5px;
+}
+
+#ATBProgress {
+    border-radius: 2px;
+    background-color: rgb(244, 244, 244);
+    height: 5px;
+    float: left;
+}
+
+#confirmTurn_ATBProgressTwo {
+    z-index: 110;
+    width: 60px;
+    position: fixed;
+    left: 75px;
+    top: 250px;
+}
+
+#ATBBarTwo {
+    z-index: 100;
+    width: 50px;
+    position: fixed;
+    left: 75px;
+    top: 264px;
+}
+
+#ATBWrapperTwo {
+    border: 1px solid silver;
+    border-radius: 2px;
+    background-color: rgb(155, 155, 155);
+    height: 5px;
+}
+
+#ATBProgressTwo {
+    border-radius: 2px;
+    background-color: rgb(244, 244, 244);
+    height: 5px;
+    float: left;
+}
+
+#confirmTurn_ATBProgressThree {
+    z-index: 110;
+    width: 60px;
+    position: fixed;
+    left: 150px;
+    top: 250px;
+}
+
+#ATBBarThree {
+    z-index: 100;
+    width: 50px;
+    position: fixed;
+    left: 150px;
+    top: 264px;
+}
+
+#ATBWrapperThree {
+    border: 1px solid silver;
+    border-radius: 2px;
+    background-color: rgb(155, 155, 155);
+    height: 5px;
+}
+
+#ATBProgressThree {
+    border-radius: 2px;
+    background-color: rgb(244, 244, 244);
+    height: 5px;
+    float: left;
+}
+
+#confirmTurn_ATBProgressFour {
+    z-index: 110;
+    width: 60px;
+    position: fixed;
+    left: 225px;
+    top: 250px;
+}
+
+#ATBBarFour {
+    z-index: 100;
+    width: 50px;
+    position: fixed;
+    left: 225px;
+    top: 264px;
+}
+
+#ATBWrapperFour {
+    border: 1px solid silver;
+    border-radius: 2px;
+    background-color: rgb(155, 155, 155);
+    height: 5px;
+}
+
+#ATBProgressFour {
+    border-radius: 2px;
+    background-color: rgb(244, 244, 244);
+    height: 5px;
+    float: left;
+}
+
+#confirmTurn_ATBProgress_EOne {
+    z-index: 100;
+    width: 50px;
+    position: fixed;
+    left: 0px;
+    top: 166px;
+}
+
+#ATBBar_EOne {
+    z-index: 100;
+    width: 50px;
+    position: fixed;
+    left: 0px;
+    top: 5px;
+}
+
+#ATBWrapper_EOne {
+    border: 1px solid silver;
+    border-radius: 2px;
+    background-color: rgb(155, 155, 155);
+    height: 5px;
+}
+
+#ATBProgress_EOne {
+    border-radius: 2px;
+    background-color: rgb(244, 244, 244);
+    height: 5px;
+    float: left;
+}
+
+button {
+    margin-right: 45px;
+    visibility: hidden;
+}
+
+#confirmTurn_ATBProgress_ETwo {
+    z-index: 100;
+    width: 50px;
+    position: fixed;
+    left: 75px;
+    top: 166px;
+}
+
+#ATBBar_ETwo {
+    z-index: 100;
+    width: 50px;
+    position: fixed;
+    left: 75px;
+    top: 5px;
+}
+
+#ATBWrapper_ETwo {
+    border: 1px solid silver;
+    border-radius: 2px;
+    background-color: rgb(155, 155, 155);
+    height: 5px;
+}
+
+#ATBProgress_ETwo {
+    border-radius: 2px;
+    background-color: rgb(244, 244, 244);
+    height: 5px;
+    float: left;
+}
+
+button {
+    margin-right: 45px;
+    visibility: hidden;
+}
+
+#confirmTurn_ATBProgress_EThree {
+    z-index: 100;
+    width: 50px;
+    position: fixed;
+    left: 0px;
+    top: 166px;
+}
+
+#ATBBar_EThree {
+    z-index: 100;
+    width: 50px;
+    position: fixed;
+    left: 150px;
+    top: 5px;
+}
+
+#ATBWrapper_EThree {
+    border: 1px solid silver;
+    border-radius: 2px;
+    background-color: rgb(155, 155, 155);
+    height: 5px;
+}
+
+#ATBProgress_EThree {
+    border-radius: 2px;
+    background-color: rgb(244, 244, 244);
+    height: 5px;
+    float: left;
+}
+
+button {
+    margin-right: 45px;
+    visibility: hidden;
+}
+
+#confirmTurn_ATBProgress_ETFour {
+    z-index: 100;
+    width: 50px;
+    position: fixed;
+    left: 75px;
+    top: 166px;
+}
+
+#ATBBar_EFour {
+    z-index: 100;
+    width: 50px;
+    position: fixed;
+    left: 225px;
+    top: 5px;
+}
+
+#ATBWrapper_EFour {
+    border: 1px solid silver;
+    border-radius: 2px;
+    background-color: rgb(155, 155, 155);
+    height: 5px;
+}
+
+#ATBProgress_EFour {
+    border-radius: 2px;
+    background-color: rgb(244, 244, 244);
+    height: 5px;
+    float: left;
+}
+
+button {
+    margin-right: 45px;
+    visibility: hidden;
+}
+
+img {
+    height: 75px;
+    width: 55px;
+}
+
+#bgWrapper {
+    -webkit-perspective: 200px;
+    perspective: 200px;
+    position: fixed;
+    top: -150px;
+    left: 0px;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+#bg {
+    border: 2px solid white;
+    background: url("https://thumbs.dreamstime.com/b/pixel-white-grid-background-d-render-copy-space-75446554.jpg");
+    position: fixed;
+    top: 26vh;
+    left: -75vh;
+    width: 300vw;
+    height: 600px;
+    z-index: -1;
+    -webkit-transform: rotateX(200deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transform: rotateX(200deg);
+}
+
+.target {
+
+    display: none;
+    position: fixed;
+    bottom: 70vh;
+    height: 125px;
+    width: 70px;
+    border-radius: 25px;
+    background: red;
+    z-index: 7;
+    opacity: 0.19;
+}
+
+#target0 {
+    left: -4px;
+}
+
+#target1 {
+    left: 68px;
+}
+
+#target2 {
+    left: 143px;
+}
+
+#target3 {
+    left: 218px;
+}
+
+i {
+    font-size: 10px;
+}
+
+.dmgShow {
+    font-size: 30px;
+    font-weight: 800;
+    color: red;
+    text-shadow: 3px 3px black;
+    opacity: 1;
+    background-color: none;
+    position: fixed;
+    display: block;
+    height: 75px;
+    width: 75px;
+    z-index: 7;
+    vertical-align: middle;
+}
+
+#dmgDisplay {
+    top: 13vh;
+}
+
+#E0Img {
+    position: fixed;
+    top: 13vh;
+    left: 3px;
+    filter: hue-rotate(0deg);
+    z-index: 6;
+
+}
+
+/* 
+
+     ============================================================
+      
+          _____________   ^^^^^^^^^^    ____________________
+
+[   By ~Aryan Maurya Mr.perfect https://amsrportfolio.netlify.app  ]
+
+          _____________   ^^^^^^^^^^    ____________________
+
+     ============================================================
+
+*/
+
+#e0name {
+    position: fixed;
+    left: 0px;
+    top: 30vh;
+    width: 75px;
+    height: 30px;
+    background: rgba(00, 00, 255, 0.4);
+    color: white;
+    text-align: center;
+}
+
+#E1Img {
+    position: fixed;
+    top: 13vh;
+    left: 75px;
+    z-index: 6;
+}
+
+#e1name {
+    position: fixed;
+    left: 75px;
+    top: 30vh;
+    width: 75px;
+    height: 30px;
+    background: rgba(00, 00, 255, 0.4);
+    color: white;
+    text-align: center;
+}
+
+#E2Img {
+    position: fixed;
+    top: 13vh;
+    left: 150px;
+    z-index: 6;
+}
+
+#e2name {
+    position: fixed;
+    left: 150px;
+    top: 30vh;
+    width: 75px;
+    height: 30px;
+    background: rgba(00, 00, 255, 0.4);
+    color: white;
+    text-align: center;
+}
+
+#E3Img {
+    position: fixed;
+    top: 13vh;
+    left: 225px;
+    z-index: 6;
+}
+
+#e3name {
+    position: fixed;
+    left: 225px;
+    top: 30vh;
+    width: 75px;
+    height: 30px;
+    background: rgba(00, 00, 255, 0.4);
+    color: white;
+    text-align: center;
+}
+
+#P0Img {
+    position: fixed;
+    bottom: 42vh;
+    left: 10px;
+}
+
+#p0name {
+    position: fixed;
+    left: 0px;
+    bottom: 32vh;
+    width: 75px;
+    height: 30px;
+    background: rgba(00, 00, 255, 0.4);
+    color: white;
+    text-align: center;
+}
+
+#P1Img {
+    position: fixed;
+    bottom: 42vh;
+    left: 75px;
+    filter: hue-rotate(0deg)
+}
+
+#p1name {
+    position: fixed;
+    left: 75px;
+    bottom: 32vh;
+    width: 75px;
+    height: 30px;
+    background: rgba(00, 00, 255, 0.4);
+    color: white;
+    text-align: center;
+}
+
+#P2Img {
+    position: fixed;
+    bottom: 42vh;
+    left: 150px;
+    filter: hue-rotate(180deg)
+}
+
+#p2name {
+    position: fixed;
+    left: 150px;
+    bottom: 32vh;
+    width: 75px;
+    height: 30px;
+    background: rgba(00, 00, 255, 0.4);
+    color: white;
+    text-align: center;
+}
+
+#P3Img {
+    position: fixed;
+    bottom: 42vh;
+    left: 225px;
+}
+
+#p3name {
+    position: fixed;
+    left: 225px;
+    bottom: 32vh;
+    width: 75px;
+    height: 30px;
+    background: rgba(00, 00, 255, 0.4);
+    color: white;
+    text-align: center;
+}
+
+/* ================================================ */
+/*               System Styling                     */
+
+/*               Alert Box Style                    */
+/* ================================================ */
+#X {
+    display: none;
+    z-index: 100;
+    position: fixed;
+    bottom: 19.5vh;
+    right: 4vw;
+    background: #a00000;
+    border: 3px outset #c00000;
+    color: white;
+}
+
+#aBox {
+    z-index: 100;
+    position: fixed;
+    bottom: 0vh;
+    left: 1px;
+    height: 21vh;
+    width: 92vw;
+    padding: 3vw;
+    background-color: #999aaa;
+    border: 0.75vw outset gray;
+    border-radius: 3px;
+    transition: 1.33s;
+}
+
+#aText {
+    display: block;
+    height: 19vw;
+    border: 1vw inset gray;
+    border-radius: 3px;
+    padding: 3vw;
+    background-color: lightgray;
+    font-size: 10px;
+    overflow-y: scroll;
+}
+
+/* ================================================ */
+/*              Dialog Box Style                 */
+/* ================================================ */
+#systemDebugDisplay {
+    display: none;
+    position: fixed;
+    left: 0px;
+    width: 100vw;
+    top: 323px;
+    background: beige;
+    color: blue;
+    visibility: hidden;
+}
+
+#systemOutDisplay {
+    display: none;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid black;
+}
+
+#systemOut {
+    font-size: 16px;
+    border: 4px outset silver;
+    background-color: rgb(001, 010, 151);
+    height: 100px;
+    width: 90vw;
+    margin: 5vw;
+    color: white;
+    z-index: 20;
+    border-radius: 10px;
+    box-shadow: 3px 10px rgb(22, 22, 99);
+}
+
+#confirmButtons {
+    color: white;
+    background-color: black;
+    position: relative;
+    top: -23px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#confirmButtons button {
+    margin-top: 50px;
+    color: white;
+    background-color: black;
+    border: 3px outset silver;
+    border-radius: 12px;
+}
+
+#systemOut input {
+    margin-top: 50px;
+    color: white;
+    background-color: rgb(22, 22, 22);
+    border: 3px inset lightblue;
+    border-radius: 12px;
+    padding-left: 5px;
+    margin-right: 5px;
+    width: 50px;
+}
+
+#confirmButtons select {
+    margin-top: 50px;
+    color: white;
+    background-color: rgb(22, 22, 22);
+    border: 3px inset lightblue;
+    border-radius: 12px;
+    padding-left: 5px;
+    margin-right: 5px;
+}
+
+#confirmButtons button:hover {
+    color: black;
+    background-color: silver;
+    border: 3px inset white;
+    border-radius: 12px;
+}
+
+/* 
+
+     ============================================================
+      
+          _____________   ^^^^^^^^^^    ____________________
+
+[   By ~Aryan Maurya Mr.perfect https://amsrportfolio.netlify.app  ]
+
+          _____________   ^^^^^^^^^^    ____________________
+
+     ============================================================
+
+*/

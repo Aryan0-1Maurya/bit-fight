@@ -1,0 +1,397 @@
+<!-- 
+
+      ************************************************************
+
+           ++++++++++++++    --------    +++++++++++++++++
+
+{   By ~Aryan Maurya Mr.perfect https://amsrportfolio.netlify.app  }
+
+           ++++++++++++++    --------    +++++++++++++++++
+
+      ************************************************************
+ -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>bit fight </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="author" content="Aryan Maurya" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <meta
+      name="description"
+      content="This is online Bit s game , best game,new starter gamesbaby fightiing, original party,new par game build for your imporove thing skill in this domain by aryan maurya enjoy your game"
+    />
+    <meta
+      name="keywords"
+      content="bit,bits game,bit games,biut bit game,fight bit,fight game,fighting game,fighting ,gin game,fight games,bit ssanmd fight ,fight game,games,fights,games game by aryan , aryan sir, aryan sir game"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+    <script src="https://www.gstatic.com/firebasejs/4.1.5/firebase.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+ 
+    <script src="https://battler-9d8fc.firebaseapp.com/games/UnStableVersion/battlerOneSix_system_dialog03.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+</head>
+
+<body>
+  
+    <!-- Loading screen -->
+    <article id="loading2"><b id="loading">Loading...</b></article>
+  
+    <article id="menuScreen">
+        <p onClick="i('menuScreen').style.display='none'; startATB();  initialize();"
+            style="display:block; border:1px solid rgb(156, 118, 118);">Click here to begin</p>
+    </article>
+ 
+    <script type="text/javascript">
+        if (document.images) {
+            /* Enemy Images *//* Map Icons */   /*Gif Animations*/
+            img1 = new Image(); icon1 = new Image(); gfx1 = new Image();
+            img2 = new Image(); icon2 = new Image(); gfx2 = new Image();
+            img3 = new Image(); icon3 = new Image(); gfx3 = new Image();
+            img4 = new Image(); icon4 = new Image(); gfx4 = new Image();
+            img5 = new Image(); icon5 = new Image(); img9 = new Image();
+            img6 = new Image(); icon6 = new Image();
+            img10 = new Image();
+            img11 = new Image();
+            monster7 = new Image();
+            img11 = new Image();
+
+            /* Battle Backs *//*Dungeon Floor Tiles*/
+            img7 = new Image(); map1 = new Image();
+            img8 = new Image(); map2 = new Image();
+            back1 = new Image(); map3 = new Image();
+            back2 = new Image(); map4 = new Image();
+            back3 = new Image(); map5 = new Image();
+            back4 = new Image();
+            back5 = new Image();
+            back6 = new Image();
+
+            // SVG Icon Source Images - These are my images
+            icon1.src = "http://koji.uphero.com/games/sprites/iconSet/keyIcon.svg";
+            icon2.src = "http://koji.uphero.com/games/sprites/iconSet/bluIcon.svg";
+            icon3.src = "http://koji.uphero.com/games/sprites/iconSet/coinIcon.svg";
+            icon4.src = "http://koji.uphero.com/games/sprites/iconSet/chestIcon.svg";
+            icon5.src = "http://koji.uphero.com/games/sprites/iconSet/openChestIcon.svg";
+            icon6.src = "http://koji.uphero.com/games/sprites/iconSet/doorIcon.svg";
+
+            //Enemy Source Images -- I claim no ownership of any other images used here
+            img1.src = "http://koji.uphero.com/games/sprites/Mushroom.png";
+            img2.src = "http://koji.uphero.com/games/sprites/scorchedEarthGolem.png";
+            img3.src = "http://koji.uphero.com/games/sprites/mario.gif";
+            img4.src = "http://koji.uphero.com/games/sprites/Mushroom.png";
+            img5.src = "http://koji.uphero.com/games/sprites/treasureChest.gif";
+            img6.src = "http://koji.uphero.com/games/sprites/scorchedEarthGolem.png";
+            monster7.src = "http://koji.uphero.com/games/sprites/blueSlime.png"
+
+            //Battler Background Images
+            img7.src = "http://koji.uphero.com/games/sprites/backgrounds/battleBack.png";
+            img8.src = "http://koji.uphero.com/games/sprites/backgrounds/battleBack2.gif";
+            back1.src = "http://koji.uphero.com/games/sprites/backgrounds/BattleBack_lava.png";
+            back2.src = "http://koji.uphero.com/games/sprites/backgrounds/battleBack_cave.jpg";
+            back3.src = "http://koji.uphero.com/games/sprites/backgrounds/battleBack_shop.jpg";
+            back4.src = "http://koji.uphero.com/games/sprites/backgrounds/battleBack_woods.png";
+            back5.src = "http://koji.uphero.com/games/sprites/backgrounds/battleBack_forest.jpg";
+            back6.src = "http://koji.uphero.com/games/sprites/backgrounds/battleBack_forest.jpg";
+
+            //Map Background Images
+            map1.src = "http://koji.uphero.com/games/sprites/backgrounds/concrete.png";
+            map2.src = "http://koji.uphero.com/games/sprites/backgrounds/grass.png";
+            map3.src = "http://koji.uphero.com/games/sprites/backgrounds/battleBack_shop.jpg";
+            map4.src = "http://koji.uphero.com/games/sprites/backgrounds/battleBack_woods.png";
+            map5.src = "http://koji.uphero.com/games/sprites/backgrounds/battleBack_forest.jpg";
+
+            //Gif Animation Images
+            img9.src = "http://koji.uphero.com/games/sprites/swordAttackGif.gif";
+            img10.src = "http://koji.uphero.com/games/sprites/fireballAnimation.gif"
+            img11.src = "http://koji.uphero.com/games/sprites/Icesmash.gif";
+
+        }
+    </script>
+    <script src="https://battler-9d8fc.firebaseapp.com/games/UnStableVersion/battlerOneSix_system_dialog03.js">
+    </script>
+
+    <div id="systemOutDisplay" style="z-index:1000;"></div>
+    <div id="systemDebugDisplay" style="z-index:0;"></div>
+
+
+    <audio style="position:fixed; display:block; width:100px; height:10px; bottom:0; left:0; border:1px solid white;"
+        src="http://koji.uphero.com/music/fanfare.mp3" id="sound" type="audio/wav" onClick=""></audio>
+
+    <div class="header" id="attackBlocker">Select a target</div>
+    <div class="target" id="target0"></div>
+
+    <div class="target" id="target1"></div>
+
+    <div class="target" id="target2"></div>
+
+    <div class="target" id="target3"></div>
+
+
+    <div id="atbE1display">
+        <img id="E0Img" src="https://cdn.pixabay.com/photo/2013/07/13/13/33/blob-161097_960_720.png">
+        <i id="e0name"></i>
+
+        <div id="hpE0display">
+            <div id="HPBarE">
+                <div id="HPWrapperE">
+                    <div id="HPDamageE"></div>
+                </div>
+            </div>
+        </div>
+
+        <button id="confirmTurn_ATBProgress_EOne" style="visibility:hidden;" disabled="true"
+            onClick="confirmTurn(mySpdE, speedE)">Enemy Attack!
+        </button>
+        <div id="ATBBar_EOne">
+            <div id="ATBWrapper_EOne">
+                <div id="ATBProgress_EOne"></div>
+            </div>
+        </div>
+    </div>
+    <!--End of enemy[0] display -->
+
+    <div id="atbE2display">
+        <img id="E1Img" src="https://cdn.pixabay.com/photo/2013/07/13/13/33/blob-161097_960_720.png">
+        <i id="e1name"></i>
+
+        <div id="hpE1display">
+            <div id="HPBarETwo">
+                <div id="HPWrapperETwo">
+                    <div id="HPDamageETwo"></div>
+                </div>
+            </div>
+        </div>
+
+        <button id="confirmTurn_ATBProgress_ETwo" style="visibility:hidden;" disabled="true"
+            onClick="confirmTurn(mySpdE, speedE)">Enemy Attack!</button>
+
+        <div id="ATBBar_ETwo">
+            <div id="ATBWrapper_ETwo">
+                <div id="ATBProgress_ETwo"></div>
+            </div>
+
+        </div>
+    </div>
+    <div id="atbE3display">
+        <img id="E2Img" src="https://cdn.pixabay.com/photo/2013/07/13/13/33/blob-161097_960_720.png">
+        <i id="e2name"></i>
+
+        <div id="hpE2display">
+            <div id="HPBarEThree">
+                <div id="HPWrapperEThree">
+                    <div id="HPDamageEThree"></div>
+                </div>
+            </div>
+        </div>
+
+        <button id="confirmTurn_ATBProgress_EThree" style="visibility:hidden;" disabled="true"
+            onClick="confirmTurn(mySpdE, speedE)">Enemy Attack!</button>
+
+        <div id="ATBBar_EThree">
+            <div id="ATBWrapper_EThree">
+                <div id="ATBProgress_EThree"></div>
+            </div>
+        </div>
+    </div>
+    <div id="atbE4display">
+        <img id="E3Img" src="https://cdn.pixabay.com/photo/2013/07/13/13/33/blob-161097_960_720.png"><i id="e3name"></i>
+        <div id="hpE3display">
+            <div id="HPBarEFour">
+                <div id="HPWrapperEFour">
+                    <div id="HPDamageEFour"></div>
+                </div>
+            </div>
+        </div>
+        <button id="confirmTurn_ATBProgress_EFour" style="visibility:hidden;" disabled="true"
+            onClick="confirmTurn(mySpdE, speedE)">Enemy Attack!</button>
+
+        <div id="ATBBar_EFour">
+            <div id="ATBWrapper_EFour">
+                <div id="ATBProgress_EFour"></div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- 
+
+      ************************************************************
+
+           ++++++++++++++    --------    +++++++++++++++++
+
+{   By ~Aryan Maurya Mr.perfect https://amsrportfolio.netlify.app  }
+
+           ++++++++++++++    --------    +++++++++++++++++
+
+      ************************************************************
+ -->
+    <div id="p1display">
+        <img id="P0Img" src="https://assets.rpgsite.net/images/images/000/038/342/original/GK_Jul092015_A01.png">
+
+        <i id="p0name"></i>
+
+        <button id="confirmTurn_ATBProgress" onClick="confirmTurn(mySpd1, speed1)">Attack!</button>
+        <div id="ATBBar">
+            <div id="ATBWrapper">
+                <div id="ATBProgress"></div>
+            </div>
+        </div>
+        <div id="HPBar">
+            <div id="HPWrapper">
+                <div id="HPDamage"></div>
+            </div>
+        </div>
+    </div>
+    <div id="p2display">
+        <img id="P1Img"
+            src="https://vignette.wikia.nocookie.net/logres-jrpg/images/e/e6/Fighter.png/revision/latest?cb=20170621042717">
+        <i id="p1name"></i>
+        <button id="confirmTurn_ATBProgressTwo" onClick="confirmTurn(mySpd2, speed2)">Attack!</button>
+        <div id="ATBBarTwo">
+            <div id="ATBWrapperTwo">
+                <div id="ATBProgressTwo"></div>
+            </div>
+        </div>
+        <div id="HPBarTwo">
+            <div id="HPWrapperTwo">
+                <div id="HPDamageTwo"></div>
+            </div>
+        </div>
+    </div>
+    <div id="p3display">
+        <img id="P2Img"
+            src="https://assets.rpgsite.net/images/images/000/058/486/original/Fire-Emblem-Warriors_Sakura.png">
+        <i id="p2name"></i>
+        <button id="confirmTurn_ATBProgressThree" style="visibility:hidden;"
+            onClick="confirmTurn(mySpd3, speed3)">Attack!</button>
+        <div id="ATBBarThree">
+            <div id="ATBWrapperThree">
+                <div id="ATBProgressThree"></div>
+            </div>
+        </div>
+
+        <div id="HPBarThree">
+            <div id="HPWrapperThree">
+                <div id="HPDamageThree"></div>
+            </div>
+        </div>
+    </div>
+    <div id="p4display">
+        <img id="P3Img"
+            src="https://vignette.wikia.nocookie.net/typemoon/images/b/b5/Len_mbaa.png/revision/latest?cb=20091205235942">
+        <i id="p3name"></i>
+        <button id="confirmTurn_ATBProgressFour" style="visibility:hidden;"
+            onClick="confirmTurn(mySpd4, speed4)">Attack!</button>
+        <div id="ATBBarFour">
+            <div id="ATBWrapperFour">
+                <div id="ATBProgressFour"></div>
+            </div>
+        </div>
+        <div id="HPBarFour">
+            <div id="HPWrapperFour">
+                <div id="HPDamageFour"></div>
+            </div>
+        </div>
+    </div>
+ <!-- 
+
+      ************************************************************
+
+           ++++++++++++++    --------    +++++++++++++++++
+
+{   By ~Aryan Maurya Mr.perfect https://amsrportfolio.netlify.app  }
+
+           ++++++++++++++    --------    +++++++++++++++++
+
+      ************************************************************
+ -->
+
+    <div id=bgWrapper>
+        <div id="bg"></div>
+    </div>
+<!-- 
+
+      ************************************************************
+
+           ++++++++++++++    --------    +++++++++++++++++
+
+{   By ~Aryan Maurya Mr.perfect https://amsrportfolio.netlify.app  }
+
+           ++++++++++++++    --------    +++++++++++++++++
+
+      ************************************************************
+ -->
+
+    <script>
+
+
+
+        //Add and construct a new weapon for the list of equipment (float point used with 0 for example purposes only)
+        weapon[0.00] = new equipment("Sword", 10, 0, 0, 0, "", "Blade");
+        //Using decimals as a way to increase potential equipment
+        weapon[0.01] = new equipment("Sword+1", 11, 1, 1, 1, "", "Blade");
+        weapon[0.02] = new equipment("Sword+2", 12, 2, 1, 1, "", "Blade")
+/*
+        for(x in weapon)
+        alert(weapon[x].Name)*/
+
+    </script>
+
+    <img id="swordAttack"
+        src="https://66.media.tumblr.com/ed6d6a2f4d43803c8b5224aa1504a094/tumblr_inline_nw7vgi8EQy1s7k44n_540.gif"
+        style="position:fixed; display:none; z-index:2000; transform:rotateX(40deg);">
+    <i id="dmgDisplay" class="dmgShow" style="display:none;">
+
+    </i>
+    <img id="enemy0Attack"
+        src="https://66.media.tumblr.com/ed6d6a2f4d43803c8b5224aa1504a094/tumblr_inline_nw7vgi8EQy1s7k44n_540.gif"
+        style="position:fixed; display:none;">
+    <i id="dmgDisplayE0" class="dmgShow" style="position:fixed; display:none;"></i>
+    <img id="enemy1Attack"
+        src="https://66.media.tumblr.com/ed6d6a2f4d43803c8b5224aa1504a094/tumblr_inline_nw7vgi8EQy1s7k44n_540.gif"
+        style="position:fixed; display:none;">
+    <i id="dmgDisplayE1" class="dmgShow" style="position:fixed; display:none;"></i>
+    <img id="enemy2Attack"
+        src="https://66.media.tumblr.com/ed6d6a2f4d43803c8b5224aa1504a094/tumblr_inline_nw7vgi8EQy1s7k44n_540.gif"
+        style="position:fixed; display:none;">
+    <i id="dmgDisplayE2" class="dmgShow" style="position:fixed; display:none;"></i>
+    <img id="enemy3Attack"
+        src="https://66.media.tumblr.com/ed6d6a2f4d43803c8b5224aa1504a094/tumblr_inline_nw7vgi8EQy1s7k44n_540.gif"
+        style="position:fixed; display:none;">
+    <i id="dmgDisplayE3" class="dmgShow" style="position:fixed; display:none;"></i>
+    <img id="win" src="https://comps.canstockphoto.com/you-win-rubber-stamp-illustration_csp49869521.jpg"
+        style="visibility:hidden; height:110vh; width:123vw; position:fixed; top:-5vh; left:-12vw; z-index:10000;"
+        onClick="sound.play()">
+
+
+    <div id="aBox"><b id='aText'></b></div> <button id="X"></button>
+
+
+</body>
+
+</html>
+
+
+<!-- 
+
+      ************************************************************
+
+           ++++++++++++++    --------    +++++++++++++++++
+
+{   By ~Aryan Maurya Mr.perfect https://amsrportfolio.netlify.app  }
+
+           ++++++++++++++    --------    +++++++++++++++++
+
+      ************************************************************
+ -->
