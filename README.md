@@ -4,7 +4,7 @@ Engage in a thrilling battle of bits and bytes with Bit Fight, a coding challeng
 
 ## Play the Game
 
-[Play Now](https://your-username.github.io/bit-fight/) 🕹️
+[Play Now](https://aryan0-1maurya.github.io/bit-fight/) 🕹️
 
 ## About the Game
 
